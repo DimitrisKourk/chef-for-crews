@@ -1,0 +1,313 @@
+
+.hideme{
+    opacity: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .2; 
+  z-index: -1;
+  background: url("../background-portrait.webp") repeat 0 center fixed;
+  background-size: cover;
+}
+h1,h2,p{
+    cursor: default;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    margin-bottom: 2rem;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.title-container img{
+    width: 30%;
+    aspect-ratio: 1;
+    border: 1px solid white;
+    margin: .5rem;
+}
+.title-container .title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-width: 40%;
+    
+}
+
+.title-container .title div{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 0%;
+}
+
+nav ul li{
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+nav ul li a:hover {
+    text-underline-offset: .5rem;
+    text-decoration: underline;
+}
+nav ul .selected a{
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+
+}
+  
+
+.catch-phrase{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.catch-phrase h2{
+    text-align: center;
+    margin: .5rem;
+}
+main .short-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+main .short-description .contact-methods{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+main .short-description .contact-methods li{
+    margin-bottom: 1rem;
+}
+
+main .short-description .contact-methods li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+main .short-description .contact-methods li a svg{
+    margin-right: .5rem;
+}
+
+footer .title-container img{
+        width: 20%;
+        aspect-ratio: 1;
+        border: 1px solid white;
+        margin: .5rem;
+    }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+footer .title-container img{
+    width: 20%;
+    aspect-ratio: 1;
+    border: 1px solid white;
+    margin: .5rem;
+}
+
+
+
+/*desktop screens*/
+@media (min-width: 1025px) {
+    body::after {
+        content: "";
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;  
+        opacity: .2; 
+        z-index: -1;
+        background: url("../background.webp") no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid white;
+        margin-bottom: 2rem;
+    }
+
+    .title-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-container img{
+        width: 5%;
+        aspect-ratio: 1;
+        outline: 1px solid white;
+        margin: .5rem;
+    }
+    .title-container .title{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        
+    }
+
+    .title-container .title div{
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin-right: 1rem;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    nav{
+        width: 80%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+    }
+
+    nav ul li{
+        width: fit-content;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+    nav ul li a:hover {
+        text-underline-offset: .5rem;
+        text-decoration: underline;
+    }
+    nav ul .selected a{
+        text-decoration: underline;
+        text-underline-offset: .5rem;
+    }
+    main{
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    main .short-description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: fit-content;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .short-description .contact-methods{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        min-height: fit-content;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    }
+
+    main .contact-methods li{
+        font-size: x-large;
+        margin: 1rem;
+        
+    }
+    
+    footer .contact-methods{
+        flex-direction: row;
+        justify-content: space-evenly;
+            width: 60%;
+    }
+    footer .title-container img{
+        width: 5%;
+        aspect-ratio: 1;
+        border: 1px solid white;
+        margin: .5rem;
+    }
+
+}
