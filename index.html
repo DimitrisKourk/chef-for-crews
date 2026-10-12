@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex</title>
-    <meta name="description" content="Experience the culinary artistry of Chef for Crews Alexander Lasca in the Netherlands. Offering bespoke catering, exclusive private dinners, restaurant service and consulting as well as traditional Japanese Sushi.">
+    <title>Chef for Crews | Private Chef &amp; Catering in the Netherlands</title>
+    <meta name="description" content="Experience the culinary artistry of Chef for Crews Alexander Laska in the Netherlands. Offering bespoke catering, exclusive private dinners, restaurant service and consulting as well as traditional Japanese Sushi.">
+    <!-- Skip the intro animation if it already played this visit, or if the user prefers reduced motion -->
+    <script>
+      try {
+        if (sessionStorage.getItem("introPlayed") === "true" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.documentElement.classList.add("no-intro");
+        }
+      } catch (e) { /* storage unavailable: play the intro */ }
+    </script>
     <link rel="stylesheet" href="./styles/Home.css">
-    <link rel="icon" href="/assets/alex logo icon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/alex-logo-icon.ico" type="image/x-icon">
     <script src="script.js"></script>
     <script src="curtain-reveal-script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +25,7 @@
     <div id="main" class="flex"></div>
     <header>
         <div class="title-container">
-            <img src="assets/alex logo.svg" alt="404">
+            <img src="assets/alex-logo.svg" alt="Chef for Crews logo">
             <div class="title">
                 <div>Chef</div>
                 <div>For</div>
@@ -26,22 +34,22 @@
         </div>
         <nav>
             <ul>
-                <li class="home selected"><a href="/index.html" aria-label="Chef for Crews home page">Home</a></li>
-                <li class="services"><a href="/services.html" aria-label="Chef for Crews services page">Services</a></li>
-                <li class="story"><a href="/partnerships.html" aria-label="Chef for Crews Partnerships page">Partnerships</a></li>
-                <li class="contact"><a href="/contact.html" aria-label="Chef for Crews contact us page">Contact Us</a></li>
+                <li class="home selected"><a href="index.html" aria-label="Chef for Crews home page">Home</a></li>
+                <li class="services"><a href="services.html" aria-label="Chef for Crews services page">Services</a></li>
+                <li class="story"><a href="partnerships.html" aria-label="Chef for Crews Partnerships page">Partnerships</a></li>
+                <li class="contact"><a href="contact.html" aria-label="Chef for Crews contact us page">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
         
         <div class="catch-phrase loadFadeIn">
-            <h2>WE DONT JUST COOK</h2>  
+            <h2>WE DON'T JUST COOK</h2>  
             <h2>WE CREATE MEMORIES</h2>
             <h2>WITH FLAVOUR</h2>
         </div>
         <div class="short-description">
-            <video muted loop autoplay aria-label="Short showcase video" src="/assets/alex video intro.mp4" type="video/mp4"> Video Missing. 404 Error</video>
+            <video muted loop autoplay playsinline aria-label="Short showcase video" src="assets/alex-video-intro.mp4" type="video/mp4"> Video Missing. 404 Error</video>
             <div class="text">
                 <p>
                 Founded by <span class="bold-text">Alexander Laska</span>, a culinary professional with <span class="bold-text">over a decade of experience</span> trained in <span class="bold-text"> Greece, Italy, the United Kingdom, and the Netherlands</span> "Chef for Crews" brings world-class kitchen expertise to every project.</p>
@@ -50,8 +58,8 @@
                  Chef for Crews selects the <span class="bold-text">best quality fresh ingredients</span> and combines them with <span class="bold-text">passion, creativity, and precision</span> to deliver <span class="bold-text">exceptional food experiences</span>.
                 </p>
 
-                <a class="story-button" href="/story.html" aria-label="Chef for Crews Our story page">
-                    Learn Our Story
+                <a class="story-button" href="services.html" aria-label="Chef for Crews services page">
+                    Explore Our Services
                 </a>
                 </div>
         </div>
@@ -68,7 +76,7 @@
 </svg> +31 615535483</a></li>
             </ul>
         <div class="title-container">
-            <img src="assets/alex logo.svg" alt="404">
+            <img src="assets/alex-logo.svg" alt="Chef for Crews logo">
             <h2>Chef for Crews</h2>
         </div>
     </footer>

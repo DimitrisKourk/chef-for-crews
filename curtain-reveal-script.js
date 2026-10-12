@@ -55,6 +55,16 @@ const revealCurtain = (parent) => {
 
 const init = () => {
   const container = document.getElementById("main");
+  if (!container) return;
+
+  // Decided in the <head> of index.html: intro already played this visit, or reduced motion is on
+  if (document.documentElement.classList.contains("no-intro")) {
+    container.style.display = "none";
+    return;
+  }
+  try {
+    sessionStorage.setItem("introPlayed", "true");
+  } catch (e) { /* storage unavailable: the intro will simply play again */ }
   
   // Set the container to be on top of everything
   container.style.position = "fixed";

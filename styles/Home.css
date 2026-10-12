@@ -511,3 +511,16 @@ footer .title-container img{
     margin-top: 13px;
   }
 }
+
+/* iOS Safari ignores background-attachment: fixed. Pinning the background layer itself
+   to the viewport gives the same effect in every browser. */
+body::after {
+    position: fixed;
+    height: 100%;
+    background-attachment: scroll;
+}
+
+/* intro animation skipped (see index.html) */
+.no-intro #main {
+    display: none;
+}

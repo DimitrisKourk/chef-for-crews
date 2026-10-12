@@ -535,3 +535,11 @@ body{
         margin-right: .5rem;
     }
 }
+
+/* iOS Safari ignores background-attachment: fixed. Pinning the background layer itself
+   to the viewport gives the same effect in every browser. */
+body::after {
+    position: fixed;
+    height: 100%;
+    background-attachment: scroll;
+}
